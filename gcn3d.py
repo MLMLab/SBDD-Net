@@ -126,7 +126,7 @@ class Conv_layer(nn.Module):
         activation_support = torch.sum(activation_support, dim= 2)    # (bs, vertice_num, out_channel)
         feature_fuse = feature_center + activation_support # (bs, vertice_num, out_channel)
         return feature_fuse
-
+###dp pooling 구현 부분
 class Pool_layer(nn.Module):
     def __init__(self, pooling_rate: int= 4, neighbor_num: int=  4):
         super().__init__()
